@@ -12,17 +12,17 @@ git checkout proyectocoder
 Crear base de datos con los Modelos (hacer migraciones y migrar):
 
 
-python manage.py makemigrations Appfinal
-python manage.py migrate
+python3 manage.py makemigrations Appfinal
+python3 manage.py migrate
 
 Crear super-usuario
 
 
-python manage.py createsuperuser
+python3 manage.py createsuperuser
 
 Ejecutar proyecto
 
-python manage.py runserver
+python3 manage.py runserver
 
 Visualizar Web en:
 127.0.0.1/Appfinal/
