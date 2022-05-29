@@ -1,0 +1,17 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+{% block Appfinal_content %}
+
+<h2>Contactanos en:</h2>
+<hr></hr>
+<ul>
+    {% for Contacto in social %}
+        <li>
+            social: {{Contacto.social}} 
+           -- Telefono: {{Contacto.Telefono}}
+            
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

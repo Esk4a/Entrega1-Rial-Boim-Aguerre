@@ -1,0 +1,24 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+{% block Appfinal_content %}
+
+<h2>Formulario para agregar una Pelicula a la cartelera</h2>
+<hr></hr>
+<body>
+    <h1>
+        {% if peliculas.errors %}
+        <p style="color: red;"> Datos erroneos, revisar.</p>
+        {% endif %}
+    </h1>
+<form action="" method="POST">
+    {% csrf_token %}
+
+    <table>
+        {{ peliculas.as_table }}
+    </table>
+
+    <input type="submit", value="Enviar">
+</form>
+
+</body>
+{% endblock %}

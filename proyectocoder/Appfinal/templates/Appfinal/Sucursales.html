@@ -1,0 +1,18 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+{% block Appfinal_content %}
+
+<h2>Sucursales en Buenos Aires</h2>
+<hr></hr>
+<ul>
+    {% for Sucursal in Places %}
+        <li>
+            Ciudad: {{Sucursal.ciudad}} 
+           -- Calle: {{Sucursal.calle}}
+           -- Altura: {{Sucursal.altura}}
+            
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}

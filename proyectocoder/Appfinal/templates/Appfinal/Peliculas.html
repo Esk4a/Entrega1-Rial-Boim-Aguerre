@@ -1,0 +1,42 @@
+{% extends "Appfinal/index.html" %}
+{% load static %}
+{% block Appfinal_content %}
+
+<h2>Cartelera de Peliculas</h2>
+<form action="/Appfinal/Search" method="GET">
+    <div>
+        <input type="text" name="titulo_search" id="titulo" placeholder="BUSQUEDA POR TITULO">
+        <input type="submit" value="BUSCAR POR TITULO">
+    </div>
+
+</form>
+
+<hr></hr>
+
+{% if Movies %}
+    <ul>
+        {% for Movies in Movie %}
+            <li>
+                Pelicula: {{Pelicula.titulo}}
+                
+            </li>
+        {% endfor %}
+    </ul>
+{% endif %}
+
+
+
+<hr></hr>
+<ul>
+    {% for Movies in Movie %}
+        <li>
+            Pelicula: {{Movies.titulo}} 
+           -- Duracion: {{Movies.duracion}}
+           -- Emision: {{Movies.emision}}
+
+            
+        </li>
+    {% endfor %}
+</ul>
+
+{% endblock %}
